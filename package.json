@@ -19,11 +19,16 @@
         "require": "./dist/index.cjs",
         "default": "./dist/index.modern.js"
     },
+    "files": [
+        "dist/*"
+    ],
     "main": "./dist/index.cjs",
     "module": "./dist/index.module.js",
     "browser": "./dist/index.umd.js",
     "scripts": {
-        "build": "microbundle --format modern,cjs,umd  --output dist/index.js",
+        "build:node": "microbundle --format modern,cjs --output dist/index.js",
+        "build:web": "microbundle --format umd --output dist/index.js --external none",
+        "build": "pnpm build:node && pnpm build:web",
         "dev": "microbundle watch",
         "test": "NODE_ENV=test jest --verbose --coverage",
         "test:watch": "NODE_ENV=test jest --watch",
