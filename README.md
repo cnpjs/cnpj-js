@@ -5,8 +5,27 @@ usando a API do [cnpjs.dev](https://cnpjs.dev).
 
 ## Instalação
 
+## Gerenciador de pacotes
+
+Usando npm:
+
 ```sh
 npm install @cnpjs/cnpj
+```
+
+##  CDN
+
+Adicione a tag `<script>` no HTML:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@cnpjs/cnpj@0"></script>
+```
+
+Também está disponível o _bundle_ `modern` para browsers mais novos
+com [suporte a ECMAScript modules](https://caniuse.com/es6-module).
+
+```html
+<script type="module" src="https://cdn.jsdelivr.net/npm/@cnpjs/cnpj@0/dist/index.modern.js"></script>
 ```
 
 ## Exemplo de uso
