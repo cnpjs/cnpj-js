@@ -14,7 +14,7 @@ npm install @cnpjs/cnpj
 ```javascript
 import cnpj from '@cnpjs/cnpj';
 
-const empresa = await cnpj()
+const empresa = await cnpj('34028316000103')
 console.log(empresa)
 
 ```
